@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "842839779614",
+    "project_id": "espiot-edc59",
+    "storage_bucket": "espiot-edc59.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:842839779614:android:0ff5393cd32f548077010f",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgAO-sqy24kqhCO0RUWRIxa3daBk-c9RE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
