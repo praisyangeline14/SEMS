@@ -30,7 +30,7 @@ class EnergyApp extends StatelessWidget {
         ),
 
         appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.black,
           elevation: 0,
           centerTitle: true,
           foregroundColor: Colors.black,
