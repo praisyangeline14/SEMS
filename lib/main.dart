@@ -2,6 +2,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter_application_1/screens/bill.dart';
+import 'package:flutter_application_1/screens/bottom_nav.dart';
 import 'package:flutter_application_1/screens/menu.dart';
 import 'package:flutter_application_1/screens/overview.dart';
 import 'package:flutter_application_1/screens/timer.dart';
@@ -30,7 +31,7 @@ class EnergyApp extends StatelessWidget {
         ),
 
         appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.black,
+          backgroundColor: Colors.white,
           elevation: 0,
           centerTitle: true,
           foregroundColor: Colors.black,
@@ -223,9 +224,10 @@ class _EnergyHomePageState extends State<EnergyHomePage> {
                                   sideTitles: SideTitles(
                                     showTitles: true,
                                     interval: 1,
-                                    getTitlesWidget: (value, meta) =>
-                                        Text(value.toStringAsFixed(0),
-                                            style: const TextStyle(fontSize: 10)),
+                                    getTitlesWidget: (value, meta) {
+                                       return  Text(value.toStringAsFixed(0),
+                                            style: const TextStyle(fontSize: 10));
+                                    },
                                   ),
                                 ),
                                 topTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
@@ -366,6 +368,7 @@ class _EnergyHomePageState extends State<EnergyHomePage> {
           ),
         ),
       ),
+      bottomNavigationBar: BottomNavBar(currentIndex: 0),
     );
   }
 

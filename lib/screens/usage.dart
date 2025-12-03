@@ -46,7 +46,7 @@ class _UsagePageState extends State<UsagePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // ------------------ TITLE ONLY (NO BACK BUTTON) ------------------
+              // ------------------ TITLE ONLY ------------------
               const Text(
                 "Usage Overview",
                 style: TextStyle(
@@ -70,7 +70,7 @@ class _UsagePageState extends State<UsagePage> {
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor:
-                          isSelected ? Colors.teal : Colors.white,
+                          isSelected ? Colors.blue : Colors.white,
                       foregroundColor:
                           isSelected ? Colors.white : Colors.black87,
                       elevation: isSelected ? 3 : 0,
@@ -78,7 +78,7 @@ class _UsagePageState extends State<UsagePage> {
                         borderRadius: BorderRadius.circular(30),
                         side: BorderSide(
                           color: isSelected
-                              ? Colors.teal
+                              ? Colors.blue
                               : Colors.grey.shade300,
                         ),
                       ),
@@ -113,7 +113,7 @@ class _UsagePageState extends State<UsagePage> {
                       value: selectedDay,
                       underline: const SizedBox(),
                       icon: const Icon(Icons.arrow_drop_down,
-                          color: Colors.teal),
+                          color: Colors.blue),
                       items: dailyData.keys
                           .map(
                             (day) => DropdownMenuItem(
@@ -264,7 +264,7 @@ class _UsagePageState extends State<UsagePage> {
                       style: const TextStyle(
                         fontSize: 26,
                         fontWeight: FontWeight.bold,
-                        color: Colors.teal,
+                        color: Colors.blue, // <-- match graph color
                       ),
                     ),
                   ],
@@ -293,14 +293,14 @@ class _UsagePageState extends State<UsagePage> {
           barRods: [
             BarChartRodData(
               toY: dailyData[selectedDay] ?? 0,
-              color: Colors.teal,
+              color: Colors.blue,
               width: 25,
               borderRadius: BorderRadius.circular(6),
               backDrawRodData: BackgroundBarChartRodData(
                 show: true,
                 toY: _getMaxY(),
                 // ignore: deprecated_member_use
-                color: Colors.teal.shade100.withOpacity(0.3),
+                color: Colors.blue.shade100.withOpacity(0.3),
               ),
             ),
           ],
@@ -318,14 +318,14 @@ class _UsagePageState extends State<UsagePage> {
               barRods: [
                 BarChartRodData(
                   toY: e.value,
-                  color: Colors.teal,
+                  color: Colors.blue,
                   width: 20,
                   borderRadius: BorderRadius.circular(6),
                   backDrawRodData: BackgroundBarChartRodData(
                     show: true,
                     toY: _getMaxY(),
                     // ignore: deprecated_member_use
-                    color: Colors.teal.shade100.withOpacity(0.3),
+                    color: Colors.blue.shade100.withOpacity(0.3),
                   ),
                 ),
               ],
@@ -343,14 +343,14 @@ class _UsagePageState extends State<UsagePage> {
             barRods: [
               BarChartRodData(
                 toY: e.value,
-                color: Colors.teal,
+                color: Colors.blue,
                 width: 18,
                 borderRadius: BorderRadius.circular(6),
                 backDrawRodData: BackgroundBarChartRodData(
                   show: true,
                   toY: _getMaxY(),
                   // ignore: deprecated_member_use
-                  color: Colors.teal.shade100.withOpacity(0.3),
+                  color: Colors.blue.shade100.withOpacity(0.3),
                 ),
               ),
             ],
