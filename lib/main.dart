@@ -1,15 +1,24 @@
 import 'dart:math';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter_application_1/screens/bill.dart';
 import 'package:flutter_application_1/screens/bottom_nav.dart';
 import 'package:flutter_application_1/screens/menu.dart';
+import 'package:flutter_application_1/screens/mqtt_sever.dart';
 import 'package:flutter_application_1/screens/overview.dart';
 import 'package:flutter_application_1/screens/timer.dart';
 import 'package:flutter_application_1/screens/usage.dart';
 import 'package:intl/intl.dart';
 
-void main() => runApp(const EnergyApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // 🔥 Initialize Firebase
+  await Firebase.initializeApp();
+
+  runApp(const EnergyApp());
+}
 
 class EnergyApp extends StatelessWidget {
   const EnergyApp({super.key});
@@ -355,6 +364,19 @@ class _EnergyHomePageState extends State<EnergyHomePage> {
                           context,
                           MaterialPageRoute(
                             builder: (context) => UsagePage(),
+                          ),
+                        );
+                      },
+                    ),
+                     _buildGridButton(
+                      title: "Control",
+                      icon: Icons.show_chart,
+                      color: Colors.lightBlue,
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => RelayControlPage(),
                           ),
                         );
                       },
